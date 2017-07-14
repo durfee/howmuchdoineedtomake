@@ -1,0 +1,19 @@
+{
+  "name": "howmuchdoineedtomake",
+  "version": "1.0.0",
+  "description": "A silly tool to help ~you~ me with budgeting",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/durfee/howmuchdoineedtomake.git"
+  },
+  "author": "durfee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/durfee/howmuchdoineedtomake/issues"
+  },
+  "homepage": "https://github.com/durfee/howmuchdoineedtomake#readme"
+}
