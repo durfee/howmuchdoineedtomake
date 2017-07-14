@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import InputField from './InputField';
 import accounting from 'accounting';
+import './style.css';
 import {
   Provider,
   Heading,
@@ -9,6 +11,7 @@ import {
   Label,
   Input,
   Divider,
+  Small,
 } from 'rebass';
 
 class App extends Component {
@@ -27,7 +30,7 @@ class App extends Component {
   };
 
   /**
-   * Handle the change event for a field
+   * Handle the component change event for a field and set state
    *
    * @param {object} event
   */
@@ -38,12 +41,6 @@ class App extends Component {
 
     this.setState({ [name]: value });
   }
-
-  /**
-  * Check the value of a field, set to 1 if no value
-  *
-  * @param {string} input
-  */
 
   tryNumber(input) {
     const value = parseFloat(input);
@@ -79,7 +76,7 @@ class App extends Component {
               <Heading mb={4}
                 children='How much do I need to make'
               />
-              <Divider mb={2}/>
+              <Divider mb={3}/>
             </Box>
             <Box w='1/4' ml={5}>
               <Subhead
@@ -88,99 +85,64 @@ class App extends Component {
               <Subhead
                 children={"My minimum rate is " + minRateFormatted + " per hour"}
               />
-              <Divider mb={2}/>
+              <Divider mb={3}/>
             </Box>
           </Flex>
 
           <Flex w={[1]}>
-            <Box w={[1, 1/2]} mx={[2]}>
+            <Box w={[1, 1/2, 1/4]} mx={[2]}>
               <Subhead
                 children='Costs'
                 mb={3}
               />
-              <Box mb={2}>
-                <Label>Rent</Label>
-                <Input
-                  placeholder='900'
-                  bg='gray5'
-                  value={this.tryNumber(rent)}
-                  defaultValue={rent}
-                  onBlur={this.handleChange}
-                  name='rent'
-                />
-              </Box>
-              <Box mb={2}>
-                <Label>Bills</Label>
-                <Input
-                  placeholder='100'
-                  bg='gray5'
-                  value={this.tryNumber(bills)}
-                  defaultValue={bills}
-                  onBlur={this.handleChange}
-                  name='bills'
-                />
-              </Box>
-              <Box mb={2}>
-                <Label>Food costs per week</Label>
-                <Input
-                  placeholder='200'
-                  bg='gray5'
-                  value={this.tryNumber(foodPerWeek)}
-                  defaultValue={foodPerWeek}
-                  onBlur={this.handleChange}
-                  name='food'
-                />
-              </Box>
-              <Box mb={2}>
-                <Label>Drinking budget per week</Label>
-                <Input
-                  placeholder='100'
-                  bg='gray5'
-                  value={this.tryNumber(drinkingPerWeek)}
-                  defaultValue={drinkingPerWeek}
-                  onBlur={this.handleChange}
-                  name='drinking'
-                />
-              </Box>
-              <Box mb={2}>
-                <Label>Coffee budget per week</Label>
-                <Input
-                  placeholder='30'
-                  bg='gray5'
-                  value={this.tryNumber(coffeePerWeek)}
-                  defaultValue={coffeePerWeek}
-                  onBlur={this.handleChange}
-                  name='coffee'
-                />
-              </Box>
+              <InputField
+                name='Rent'
+                legend='Monthly rent/morgage/lease'
+                value={rent}
+                onInputChange={this.handleChange}
+              />
+              <InputField
+                name='Bills'
+                legend='Monthly bill spend'
+                value={bills}
+                onInputChange={this.handleChange}
+              />
+              <InputField
+                name='Food'
+                legend='Cost of food every week'
+                value={foodPerWeek}
+                onInputChange={this.handleChange}
+              />
+              <InputField
+                name='Drinking'
+                legend='Weekly bad habit fund'
+                value={drinkingPerWeek}
+                onInputChange={this.handleChange}
+              />
+              <InputField
+                name='Coffee'
+                legend='Weekly good habit fund'
+                value={coffeePerWeek}
+                onInputChange={this.handleChange}
+              />
             </Box>
-            <Box w={[1, 1/2]} mx={[2]}>
+            <Box w={[1, 1/2, 1/4]} mx={[2]}>
               <Subhead
                 children='Goals'
                 mb={3}
               />
-              <Box mb={2}>
-                <Label>Weeks of Vacation</Label>
-                <Input
-                  placeholder='4'
-                  bg='gray5'
-                  value={this.tryNumber(vacation)}
-                  defaultValue={vacation}
-                  onBlur={this.handleChange}
-                  name='vacation'
-                />
-              </Box>
-              <Box mb={2}>
-                <Label>Billable Hours per Week</Label>
-                <Input
-                  placeholder='32'
-                  bg='gray5'
-                  value={this.tryNumber(hoursPerWeek)}
-                  defaultValue={hoursPerWeek}
-                  onBlur={this.handleChange}
-                  name='hours'
-                />
-              </Box>
+              <InputField
+                name='Vacation'
+                legend='Ideal weeks of vacation per year'
+                value={vacation}
+                onInputChange={this.handleChange}
+              />
+              <InputField
+                name='Hours'
+                legend='Ideal hours per week'
+                value={hoursPerWeek}
+                onInputChange={this.handleChange}
+              />
             </Box>
           </Flex>
         </Flex>
