@@ -8,10 +8,7 @@ import {
   Subhead,
   Flex,
   Box,
-  Label,
-  Input,
   Divider,
-  Small,
 } from 'rebass';
 
 class App extends Component {
