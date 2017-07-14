@@ -1,11 +1,7 @@
 {
   "name": "howmuchdoineedtomake",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A silly tool to help ~you~ me with budgeting",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/durfee/howmuchdoineedtomake.git"
@@ -15,5 +11,18 @@
   "bugs": {
     "url": "https://github.com/durfee/howmuchdoineedtomake/issues"
   },
-  "homepage": "https://github.com/durfee/howmuchdoineedtomake#readme"
+  "homepage": "https://github.com/durfee/howmuchdoineedtomake#readme",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10",
+    "rebass": "^1.0.0-6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
