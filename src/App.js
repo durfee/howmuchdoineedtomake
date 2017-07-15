@@ -78,7 +78,6 @@ class App extends Component {
           column
           bg='gray9'
           color='gray0'
-          m={-2}
           p={[4]}>
           <Flex
             align='baseline'
@@ -171,10 +170,9 @@ class App extends Component {
           column
           bg='gray6'
           color='gray0'
-          m={-2}
           p={[4]}>
           <Text center>
-            Made with &lt;3 by <Link href='//durfee.me' children='Durfee' /> | Deployed on <Link href='//now.sh' children='now.sh'/> | built with <Link href='https://github.com/facebook/react' children='React'/> and <Link href='https://github.com/jxnblk/rebass' children='Rebass' />
+            Made with &lt;3 by <Link href='//durfee.me' children='Durfee' /> | Deployed on <Link href='//now.sh' children='now.sh'/> | built with <Link href='https://github.com/facebook/react' children='React'/> and <Link href='https://github.com/jxnblk/rebass' children='Rebass' /> | Checkout the <Link href="/_src" children='source code'/> or <Link href="https://github.com/durfee/howmuchdoineedtomake" children="give it a star" target='_blank'/>.
           </Text>
         </Flex>
       </Provider>
