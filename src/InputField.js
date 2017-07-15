@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import {
-  Flex,
   Box,
   Label,
   Input,
-  Divider,
   Small,
 } from 'rebass';
 

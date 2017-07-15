@@ -9,6 +9,11 @@ import {
   Flex,
   Box,
   Divider,
+  Text,
+  Link,
+  Panel,
+  PanelFooter,
+  PanelHeader,
 } from 'rebass';
 
 class App extends Component {
@@ -61,35 +66,52 @@ class App extends Component {
     const hoursPerWeek = this.state.hours;
 
     const costs = rent + bills + foodTotal + drinkingTotal + coffeeTotal;
-    const minRate = costs / hoursPerWeek;
+    const vacationMultiplier = 52 / (52 - vacation);
+    const minRate = (costs / hoursPerWeek) * vacationMultiplier;
     const minRateFormatted = accounting.formatMoney(minRate);
     const costsFormatted = accounting.formatMoney(costs);
 
     return (
       <Provider>
-        <Flex align='left' column bg='gray9' color='gray0' m={-2} p={[4]}>
-          <Flex align='baseline'>
-            <Box w='3/4'>
-              <Heading mb={4}
+        <Flex
+          align='left'
+          column
+          bg='gray9'
+          color='gray0'
+          m={-2}
+          p={[4]}>
+          <Flex
+            align='baseline'
+            wrap mb={6}
+            w={1}>
+            <Box w={[1, 1/2]} pr={[0, 2]}>
+              <Heading mb={3}
                 children='How much do I need to make'
               />
               <Divider mb={3}/>
+              <Text>
+                Money is hard.
+              </Text>
             </Box>
-            <Box w='1/4' ml={5}>
-              <Subhead
-                children={"My total costs each month are: " + costsFormatted}
-              />
-              <Subhead
-                children={"My minimum rate is " + minRateFormatted + " per hour"}
-              />
-              <Divider mb={3}/>
+            <Box w={[1, 1/2, 1/4]} pl={[0, 2]} ml={'auto'}>
+              <Panel
+                bg="green2"
+                color="gray9">
+                <PanelHeader
+                  children={"My total costs each month are: " + costsFormatted}
+                />
+                <PanelFooter
+                  children={"My break even rate is " + minRateFormatted + " per hour"}
+                />
+              </Panel>
+              {/* <Divider mb={3}/> */}
             </Box>
           </Flex>
 
-          <Flex w={[1]}>
-            <Box w={[1, 1/2, 1/4]} mx={[2]}>
+          <Flex w={[1]} wrap>
+            <Box w={[1, 1/2, 1/4]} px={[2, 0]} pr={[0, 2]}>
               <Subhead
-                children='Costs'
+                children='Expenses'
                 mb={3}
               />
               <InputField
@@ -123,7 +145,7 @@ class App extends Component {
                 onInputChange={this.handleChange}
               />
             </Box>
-            <Box w={[1, 1/2, 1/4]} mx={[2]}>
+            <Box w={[1, 1/2, 1/4]} px={[2, 0]} pl={[0, 2]}>
               <Subhead
                 children='Goals'
                 mb={3}
@@ -142,6 +164,17 @@ class App extends Component {
               />
             </Box>
           </Flex>
+        </Flex>
+        <Flex
+          align='left'
+          column
+          bg='gray5'
+          color='gray0'
+          m={-2}
+          p={[4]}>
+          <Text center>
+            Made with &lt;3 by <Link href='//durfee.me' children='Durfee' />
+          </Text>
         </Flex>
       </Provider>
     );
