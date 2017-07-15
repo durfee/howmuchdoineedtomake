@@ -95,13 +95,14 @@ class App extends Component {
             </Box>
             <Box w={[1, 1/2, 1/4]} pl={[0, 2]} ml={'auto'}>
               <Panel
-                bg="green2"
-                color="gray9">
+                bg='green2'
+                color='gray9'
+                p={2}>
                 <PanelHeader
-                  children={"My total costs each month are: " + costsFormatted}
+                  children={'My total costs each month are: ' + costsFormatted}
                 />
                 <PanelFooter
-                  children={"My break even rate is " + minRateFormatted + " per hour"}
+                  children={'My break even rate is ' + minRateFormatted + ' per hour'}
                 />
               </Panel>
               {/* <Divider mb={3}/> */}
@@ -168,12 +169,12 @@ class App extends Component {
         <Flex
           align='left'
           column
-          bg='gray5'
+          bg='gray6'
           color='gray0'
           m={-2}
           p={[4]}>
           <Text center>
-            Made with &lt;3 by <Link href='//durfee.me' children='Durfee' />
+            Made with &lt;3 by <Link href='//durfee.me' children='Durfee' /> | Deployed on <Link href='//now.sh' children='now.sh'/> | built with <Link href='https://github.com/facebook/react' children='React'/> and <Link href='https://github.com/jxnblk/rebass' children='Rebass' />
           </Text>
         </Flex>
       </Provider>
