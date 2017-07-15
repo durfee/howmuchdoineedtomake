@@ -3,6 +3,9 @@
 
 A _very_ simple budgeting tool to help ~you~ me manage my life.
 
+:eyes: https://howmuchdoineedtomake.now.sh/
+
+---
 ## Setup
 
 Get it
@@ -25,4 +28,4 @@ Launch it
 now
 ```
 
-✌️ 
+✌️ Durfee
