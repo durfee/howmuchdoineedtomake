@@ -172,7 +172,7 @@ class App extends Component {
           color='gray0'
           p={[4]}>
           <Text center>
-            Made with &lt;3 by <Link href='//durfee.me' children='Durfee' /> | Deployed on <Link href='//now.sh' children='now.sh'/> | built with <Link href='https://github.com/facebook/react' children='React'/> and <Link href='https://github.com/jxnblk/rebass' children='Rebass' /> | Checkout the <Link href="/_src" children='source code'/> or <Link href="https://github.com/durfee/howmuchdoineedtomake" children="give it a star" target='_blank'/>.
+            Made with &lt;3 by <Link href='//durfee.me' children='Durfee' /> | Deployed on <Link href='//now.sh' children='now.sh'/> | built with <Link href='https://github.com/facebook/react' children='React'/> and <Link href='https://github.com/jxnblk/rebass' children='Rebass' /> | Check out the <Link href="/_src" children='source code'/> or <Link href="https://github.com/durfee/howmuchdoineedtomake" children="give it a star" target='_blank'/>.
           </Text>
         </Flex>
       </Provider>
