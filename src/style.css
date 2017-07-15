@@ -6,3 +6,7 @@ label {
 input {
   border-radius: 0px !important;
 }
+
+body {
+  min-height: calc(100vh-82px);
+}
